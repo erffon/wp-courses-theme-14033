@@ -248,6 +248,16 @@
         <!-- This page plugins -->
         <!-- ============================================================== -->
         <?php wp_footer(); ?>
+        <script>
+            function openNav() {
+                document.getElementById("filter-sidebar").style.width = "320px";
+            }
+
+            function closeNav() {
+                document.getElementById("filter-sidebar").style.width = "0";
+            }
+        </script>
+
         </body>
 
         </html>
