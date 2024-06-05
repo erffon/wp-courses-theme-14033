@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="red-skin rtl">
+<body class="red-skin blog-page rtl">
 
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
