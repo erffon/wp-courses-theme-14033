@@ -7,12 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>LearnUp - قالب HTML دوره آنلاین و آموزش</title>
-
-    <!-- Custom CSS -->
-    <link href="<?php echo get_stylesheet_directory_uri() . '/style.css' ?>" rel="stylesheet">
-
-    <!-- Custom Color Option -->
-    <link href="<?php echo get_stylesheet_directory_uri() . '/assets/css/colors.css' ?>" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
