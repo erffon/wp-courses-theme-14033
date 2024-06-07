@@ -17,6 +17,7 @@ function register_assets()
     wp_register_script('slickjs', get_template_directory_uri() . '/assets/js/slick.js', '', '1.0.0', 'true');
     wp_register_script('counterupjs', get_template_directory_uri() . '/assets/js/counterup.min.js', '', '1.0.0', 'true');
     wp_register_script('customjs', get_template_directory_uri() . '/assets/js/custom.js', '', '1.0.0', 'true');
+    wp_register_script('front-ajax', get_template_directory_uri() . '/assets/js/ajax.js', '', '1.0.0', 'true');
 
     wp_enqueue_script('popper');
     wp_enqueue_script('bootstrap-js');
@@ -24,4 +25,5 @@ function register_assets()
     wp_enqueue_script('slickjs');
     wp_enqueue_script('counterupjs');
     wp_enqueue_script('customjs');
+    wp_enqueue_script('front-ajax');
 }
