@@ -19,11 +19,24 @@ function register_assets()
     wp_register_script('customjs', get_template_directory_uri() . '/assets/js/custom.js', '', '1.0.0', 'true');
     wp_register_script('front-ajax', get_template_directory_uri() . '/assets/js/ajax.js', '', '1.0.0', 'true');
 
+    // REGISTER AJAX
+    wp_register_script('ajaxjs', get_template_directory_uri() . '/assets/js/ajax.js', ['jquery'], '1.0.0', 'true');
+    wp_localize_script('ajaxjs', 'ajax', [
+        'ajaxVar' => admin_url('admin-ajax.php'),
+        '_nounce' => wp_create_nonce()
+    ]);
+
+
+
     wp_enqueue_script('popper');
     wp_enqueue_script('bootstrap-js');
     wp_enqueue_script('select2js');
     wp_enqueue_script('slickjs');
     wp_enqueue_script('counterupjs');
     wp_enqueue_script('customjs');
+<<<<<<< HEAD:_inc/register_assets.php
     wp_enqueue_script('front-ajax');
+=======
+    wp_enqueue_script('ajaxjs');
+>>>>>>> cacd8b5 (Feat: Ajax configurations):_inc/assets/register_assets.php
 }
