@@ -34,9 +34,5 @@ function register_assets()
     wp_enqueue_script('slickjs');
     wp_enqueue_script('counterupjs');
     wp_enqueue_script('customjs');
-<<<<<<< HEAD:_inc/register_assets.php
-    wp_enqueue_script('front-ajax');
-=======
     wp_enqueue_script('ajaxjs');
->>>>>>> cacd8b5 (Feat: Ajax configurations):_inc/assets/register_assets.php
 }
