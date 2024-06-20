@@ -65,6 +65,7 @@
 
             </div>
         </nav>
+        <nav><?php wp_nav_menu('top nav'); ?></nav>
     </div>
 </div>
 <!-- End Navigation -->
