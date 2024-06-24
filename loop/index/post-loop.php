@@ -19,7 +19,7 @@ if ($the_query->have_posts()) : ?>
                     <?php echo get_template_part('/_inc/post/post', 'post'); ?>
                 </div>
                 <div class="edu_data singles_items_border_bottom">
-                    <h4 class="title"><a href="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a></h4>
+                    <h4 class="title"><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h4>
                     <ul class="meta d-flex mt-4">
                         <li class="d-flex align-items-center"></i><?php echo get_the_author() ?></li>
                         <li class="video d-flex align-items-center"><i class="ti-video-clapper"></i>ویدئو</li>
