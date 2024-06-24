@@ -9,5 +9,6 @@ function theme_setup()
 
     // POSTS COVER IMAGE SUPPORT
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size(400, 400);
 }
 add_action('after_setup_theme', 'theme_setup');

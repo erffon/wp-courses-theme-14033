@@ -1,7 +1,8 @@
 <?php
 
 $args = [
-    'posts_per_page' => 4
+    'posts_per_page' => 4,
+    'post_type' => 'post'
 ];
 $the_query = new WP_Query($args);
 
@@ -14,7 +15,7 @@ if ($the_query->have_posts()) : ?>
                 <div class="pic">
                     <div class="topic_level bg-info text-white">سطح : متوسط</div>
                     <div class="topic_cat bg-warning text-white">جاوااسکریپت</div>
-                    <a class="pic-main" href="#" style="background-image:url(<?php echo get_template_directory_uri() . '/assets/img/course-7.jpg' ?>"></a>
+                    <?php echo get_template_part('/_inc/post/post', 'post'); ?>
                 </div>
                 <div class="edu_data singles_items_border_bottom">
                     <h4 class="title"><a href="single.html">پلاگین نویسی وردپرس</a></h4>
@@ -27,7 +28,9 @@ if ($the_query->have_posts()) : ?>
                 </div>
             </div>
         </div>
-    <?php endwhile; ?>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
+
 <?php else : ?>
     <div>مطلبی موجود نیست</div>
 <?php endif; ?>
