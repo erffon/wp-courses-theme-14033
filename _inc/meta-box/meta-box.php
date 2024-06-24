@@ -4,7 +4,7 @@ function register_level()
 {
     add_meta_box(
         'level',
-        'سطح مقاله',
+        'تنظیمات بیشتر',
         'level_html',
         '',
         'normal',
@@ -17,10 +17,17 @@ function level_html($post)
     wp_nonce_field('post_level_nounce', 'post_level_nounce');
 ?>
 
-    <label for="post-level">سطح مقاله</label>
-    <input type="text" value="<?php echo get_post_meta($post->ID, 'post_level', true); ?>" name="post_level" id="post-level" placeholder="سطح مقاله را وارد نمایید">
-
-
+    <div>
+        <label for="post-level">سطح مقاله</label>
+        <input type="text" value="<?php echo get_post_meta($post->ID, 'post_level', true); ?>" name="post_level" id="post-level" placeholder="سطح مقاله را وارد نمایید">
+    </div>
+    <div style="padding: 20px 0;">
+        <label for="post-cat">دسته بندی</label>
+        <?php
+        wp_dropdown_categories([
+            'name' => 'post-cat'
+        ]); ?>
+    </div>
 <?php
 }
 
