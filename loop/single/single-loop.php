@@ -1,5 +1,7 @@
 <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
+    <?php while (have_posts()) : the_post();
+        PostView::set_post_view(get_the_ID());
+    ?>
         <div class="article_detail_wrapss single_article_wrap format-standard">
             <div class="article_body_wrap">
 
@@ -11,6 +13,7 @@
                     <ul class="article_middle_info">
                         <li><a href="#"><span class="icons"><i class="ti-user"></i></span>توسط <?php echo get_the_author(); ?></a></li>
                         <li><a href="#"><span class="icons"><i class="ti-comment-alt"></i></span><?php echo get_comments_number() === '' ? 0 : get_comments_number(); ?> نظر ثبت شده</a></li>
+                        <li><span class="icons"><i class="ti-eye"></i><?php echo ' ' . PostView::get_post_view(get_the_ID()); ?> بازدید</span></li>
                     </ul>
                 </div>
                 <h2 class="post-title"><?php the_title() ?></h2>
