@@ -1,3 +1,4 @@
+<?php GoogleReferer::set_google_referer(get_the_ID(), $_SERVER['HTTP_REFERER']) ?>
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post();
         PostView::set_post_view(get_the_ID());
@@ -14,6 +15,7 @@
                         <li><a href="#"><span class="icons"><i class="ti-user"></i></span>توسط <?php echo get_the_author(); ?></a></li>
                         <li><a href="#"><span class="icons"><i class="ti-comment-alt"></i></span><?php echo get_comments_number() === '' ? 0 : get_comments_number(); ?> نظر ثبت شده</a></li>
                         <li><span class="icons"><i class="ti-eye"></i><?php echo ' ' . PostView::get_post_view(get_the_ID()); ?> بازدید</span></li>
+                        <li><span class="icons"><i class="ti-google"></i><?php echo ' ' . GoogleReferer::get_google_referer(get_the_ID()); ?> بازدید گوگل</span></li>
                         <li><span class="icons"><i class="ti-search"></i><?php echo ' ' . EstimateReadingTime::get_reading_time(get_the_content()); ?> دقیقه زمان مطالعه</span></li>
                     </ul>
                 </div>

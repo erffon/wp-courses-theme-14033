@@ -11,3 +11,6 @@ include_once 'class/helper-class/PostView.php';
 
 // ESTIMATE READING TIME
 include_once 'class/helper-class/EstimateReadingTime.php';
+
+// COUNT GOOGLE REFERER
+include_once 'class/helper-class/GoogleReferrer.php';
