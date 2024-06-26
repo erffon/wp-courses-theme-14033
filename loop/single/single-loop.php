@@ -14,6 +14,7 @@
                         <li><a href="#"><span class="icons"><i class="ti-user"></i></span>توسط <?php echo get_the_author(); ?></a></li>
                         <li><a href="#"><span class="icons"><i class="ti-comment-alt"></i></span><?php echo get_comments_number() === '' ? 0 : get_comments_number(); ?> نظر ثبت شده</a></li>
                         <li><span class="icons"><i class="ti-eye"></i><?php echo ' ' . PostView::get_post_view(get_the_ID()); ?> بازدید</span></li>
+                        <li><span class="icons"><i class="ti-search"></i><?php echo ' ' . EstimateReadingTime::get_reading_time(get_the_content()); ?> دقیقه زمان مطالعه</span></li>
                     </ul>
                 </div>
                 <h2 class="post-title"><?php the_title() ?></h2>

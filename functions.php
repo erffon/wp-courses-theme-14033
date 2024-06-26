@@ -8,3 +8,6 @@ include_once '_inc/meta-box/meta-box.php';
 
 // COUNT POST VIEWS
 include_once 'class/helper-class/PostView.php';
+
+// ESTIMATE READING TIME
+include_once 'class/helper-class/EstimateReadingTime.php';
