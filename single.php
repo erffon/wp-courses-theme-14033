@@ -7,7 +7,7 @@
 
 <?php echo get_template_part('partials/single/main-content', 'main-content'); ?>
 
-<?php echo get_template_part('partials/single/sidebar', 'sidebar'); ?>
+<?php get_sidebar(); ?>
 
 <?php echo get_template_part('partials/single/end-layout', 'end-layout') ?>
 <?php get_footer(); ?>
