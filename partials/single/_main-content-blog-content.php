@@ -1,9 +1,12 @@
-<!-- Blog Comment -->
 <div class="article_detail_wrapss single_article_wrap format-standard">
 
     <div class="comment-area">
         <div class="all-comments">
-            <h3 class="comments-title">05 دیدگاه</h3>
+            <?php if (get_comments_number() === '0') : ?>
+                <h3 class="comments-title">صفر دیدگاه</h3>
+            <?php else : ?>
+                <h3 class="comments-title"><?php echo get_comments_number(); ?> دیدگاه</h3>
+            <?php endif; ?>
             <div class="comment-list">
                 <ul>
 
@@ -40,7 +43,7 @@
                     </form>
                 </div>
             </div> <?php else : ?>
-            <div class="alert alert-info">دیدگاه‌های این پست بسته است!</div>
+            <div class="alert alert-info">امکان ثبت دیدگاه وجود ندارد!</div>
         <?php endif; ?>
     </div>
 
