@@ -21,3 +21,6 @@ include_once '_inc/widget/CatsWidget.php';
 
 // ADD SHORTCODES
 include_once '_inc/admin/shortcodes.php';
+
+// ADD CUSTOM POST TYPE TAXONOMY
+include_once '_inc/custom-taxonomy/tech-taxonomy.php';
