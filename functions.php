@@ -18,3 +18,6 @@ include_once 'class/helper-class/GoogleReferrer.php';
 // ADD WIDGETS
 include_once '_inc/widget/sidebar-widget.php';
 include_once '_inc/widget/CatsWidget.php';
+
+// ADD SHORTCODES
+include_once '_inc/admin/shortcodes.php';
