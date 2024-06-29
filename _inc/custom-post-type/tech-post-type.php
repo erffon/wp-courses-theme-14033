@@ -46,24 +46,24 @@ function register_tech_post_type()
 
     register_post_type('tech', $args);
 }
-function register_custom_taxonomy()
+function register_tech_taxonomy()
 {
 
     $labels = array(
-        'name'              => 'دسته بندی‌ها',
-        'singular_name'     => '',
-        'search_items'      => '',
-        'all_items'         => '',
-        'view_item'         => '',
-        'parent_item'       => '',
-        'parent_item_colon' => '',
-        'edit_item'         => '',
-        'update_item'       => '',
-        'add_new_item'      => '',
-        'new_item_name'     => '',
-        'not_found'         => '',
-        'back_to_items'     => '',
-        'menu_name'         => ''
+        'name'              => 'دسته تکنولوژی‌ها',
+        'singular_name'     => 'دسته بندی',
+        'search_items'      => 'جستجو',
+        'all_items'         => 'همه موارد',
+        'view_item'         => 'مشاهده',
+        'parent_item'       => 'آیتم والد',
+        'parent_item_colon' => 'والد کولون',
+        'edit_item'         => 'ویرایش',
+        'update_item'       => 'به روز رسانی',
+        'add_new_item'      => 'اضافه کردن جدید',
+        'new_item_name'     => 'نام آیتم جدید',
+        'not_found'         => 'چیزی یافت نشد',
+        'back_to_items'     => 'بازگشت به آیتم',
+        'menu_name'         => 'نام منو'
     );
     $args = array(
         'labels'            => $labels,
@@ -80,4 +80,5 @@ function register_custom_taxonomy()
     register_taxonomy('tags', 'tech', $args);
 }
 
-add_action('init', 'register_custom_taxonomy');
+add_action('init', 'register_tech_post_type');
+add_action('init', 'register_tech_taxonomy');
