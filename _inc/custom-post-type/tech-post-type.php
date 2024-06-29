@@ -41,7 +41,8 @@ function register_tech_post_type()
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
+        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'revisions'),
+        'taxonomies' => array('category'),
     );
 
     register_post_type('tech', $args);
@@ -67,7 +68,7 @@ function register_tech_taxonomy()
     );
     $args = array(
         'labels'            => $labels,
-        'hierarchical'      => true,
+        'hierarchical'      => false,
         'public'            => true,
         'show_ui'           => true,
         'show_admin_column' => true,
