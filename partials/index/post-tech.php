@@ -1,69 +1,27 @@
-<!-- ========================== post tech Section =============================== -->
 <section class="min-sec">
     <div class="container">
 
         <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12">
-                <div class="sec-heading-flex">
-                    <h2 class="pl-2">آخرین اخبار دنیای تکنولوژی</h2>
+            <div class="col-lg-12 col-md-12 mb-3">
+                <div class="sec-heading2 sec-heading-flex">
+                    <div class="sec-left">
+                        <h3>مطالب تکنولوژی</h3>
+                    </div>
+                    <div class="sec-right">
+                        <select class="form-control form-control-sm bg-success text-white" name="" id="">
+                            <option value="">نمایش بر اساس : جدیدترین ها</option>
+                            <option value="">محبوب ترین ها</option>
+                            <option value="">داغ ترین ها</option>
+                            <option value="">مطالب ویدئویی</option>
+                        </select>
+                        <!-- <a href="javascript:void(0);" class="btn-br-more">همه مطالب</a> -->
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-
-            <!-- Single Article -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="articles_grid_style">
-                    <div class="articles_grid_thumb">
-                        <a href="blog-detail.html"><img src=" <?php echo get_template_directory_uri() . '/assets/img/b-1.jpg' ?>" class="img-fluid" alt="" /></a>
-                    </div>
-
-                    <div class="articles_grid_caption">
-                        <h4>چطور زبان انگلیسی را سریع یاد بگیریم؟</h4>
-                        <div class="articles_grid_author">
-                            <div class="articles_grid_author_img"><img src=" <?php echo get_template_directory_uri() . '/assets/img/user-1.jpg' ?>" class="img-fluid" alt="" /></div>
-                            <h4>آدام ویلسون</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Article -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="articles_grid_style">
-                    <div class="articles_grid_thumb">
-                        <a href="blog-detail.html"><img src=" <?php echo get_template_directory_uri() . '/assets/img/b-2.jpg' ?>" class="img-fluid" alt="" /></a>
-                    </div>
-
-                    <div class="articles_grid_caption">
-                        <h4>لزوم یادگیری زبان در دنیای امروزی!</h4>
-                        <div class="articles_grid_author">
-                            <div class="articles_grid_author_img"><img src=" <?php echo get_template_directory_uri() . '/assets/img/user-2.jpg' ?>" class="img-fluid" alt="" /></div>
-                            <h4>جان اسمیت</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Article -->
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="articles_grid_style">
-                    <div class="articles_grid_thumb">
-                        <a href="blog-detail.html"><img src=" <?php echo get_template_directory_uri() . '/assets/img/b-3.jpg' ?>" class="img-fluid" alt="" /></a>
-                    </div>
-
-                    <div class="articles_grid_caption">
-                        <h4>چطور امتحان حضوری موفقی داشته باشیم؟</h4>
-                        <div class="articles_grid_author">
-                            <div class="articles_grid_author_img"><img src=" <?php echo get_template_directory_uri() . '/assets/img/user-3.jpg' ?>" class="img-fluid" alt="" /></div>
-                            <h4>دنیل ویکیونز</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <?php get_template_part('loop/index/tech-loop', 'tech-loop'); ?>
         </div>
     </div>
 </section>
-<!-- ========================== post tech Section =============================== -->
