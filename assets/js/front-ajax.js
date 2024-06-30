@@ -13,14 +13,18 @@ jQuery(document).ready(function ($) {
         action: optionValue,
         nonce: frontajax._nonce,
       },
-      beforeSend: function () {},
+      beforeSend: function () {
+        $("#ajax-tech-posts").css("opacity", 0.3);
+      },
       success: function (response) {
         if (response.success === true) {
-          console.log("🚀 ~ response:", response.content);
+          $("#ajax-tech-posts").html(response.content);
         }
       },
       error: function (error) {},
-      complete: function () {},
+      complete: function () {
+        $("#ajax-tech-posts").css("opacity", 1);
+      },
     });
   });
 });

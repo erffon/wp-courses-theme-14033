@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id='ajax-tech-posts'>
             <?php get_template_part('loop/index/tech-loop', 'tech-loop'); ?>
         </div>
     </div>
