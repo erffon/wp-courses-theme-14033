@@ -24,3 +24,6 @@ include_once '_inc/admin/shortcodes.php';
 
 // ADD CUSTOM POST TYPE TAXONOMY
 include_once '_inc/custom-post-type/tech-post-type.php';
+
+// POPULAR POST LOOP
+include_once 'loop/index/popular-post-loop.php';
