@@ -23,7 +23,8 @@ if ($the_query->have_posts()) : ?>
                     </a>
                     <div class="articles_grid_author">
                         <div class="articles_grid_author_img"><img src=" <?php echo get_avatar_url(get_the_author_meta('ID')) ?>" class="img-fluid" alt="" /></div>
-                        <h4><?php echo get_the_author(); ?></h4>
+                        <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a>
+
                     </div>
                 </div>
             </div>
